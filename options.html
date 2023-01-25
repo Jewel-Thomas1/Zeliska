@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZELISKA</title>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+    background-color: aqua;
+  }
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid aqua;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid black;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: aqua;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Select Your Location</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Location" title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="workersoption.html">Pala</a></li>
+  <li><a href="workersoption.html">Bharananganm</a></li>
+
+  <li><a href="workersoption.html">Edamattom</a></li>
+  <li><a href="workersoption.html">Thidanad</a></li>
+
+  <li><a href="workersoption.html">Pravithanam</a></li>
+  <li><a href="workersoption.html">Cherpunkal </a></li>
+  <li><a href="workersoption.html">Meenachil</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
