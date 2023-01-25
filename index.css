@@ -16,6 +16,9 @@ html, body {
     outline: none;
 }
 #content_container {
+    text-align: center;
+  width: 602px;
+  font-size: 20px;
     width: 30%;
     height: 70%;
 }
