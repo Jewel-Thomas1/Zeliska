@@ -19,13 +19,16 @@ html, body {
     text-align: center;
   width: 602px;
   font-size: 20px;
-    width: 60%;
+    width: 55%;
     height: 80%;
 }
 
 #form_container {
-    width: 100%;
+
+    width: 85 ;
     height: 90%;
+   
+    
 
     background-color: #370617;
     box-shadow: 0 0 50px -20px #000;
