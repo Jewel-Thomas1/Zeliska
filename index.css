@@ -19,13 +19,13 @@ html, body {
     text-align: center;
   width: 602px;
   font-size: 20px;
-    width: 30%;
+    width: 60%;
     height: 80%;
 }
 
 #form_container {
     width: 100%;
-    height: 85%;
+    height: 90%;
 
     background-color: #370617;
     box-shadow: 0 0 50px -20px #000;
@@ -68,8 +68,8 @@ html, body {
 
 #form_content_container {
     width: 100%;
-    height: 25%;
-
+    height: 35%;
+  
     float: left;
 
     display: flex;
@@ -109,6 +109,7 @@ input {
 #button_container {
     width: 100%;
     height: 40%;
+   
 
     background-image: linear-gradient(80deg, #FFBE0B, #FB5607 50%, #FF006E 50%, #8338EC);
     color: #fff;
@@ -137,12 +138,19 @@ input {
     justify-content: center;
     align-items: center;
 }
-<<<<<<< HEAD
-=======
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    .html,input, #form_header_container,body,#button_container button ,#form_header,#form_content_inner_container,#button_container ,input,#content_container,#form_container {
+      width: 80%;
+      padding: 0;
+    }
+    #button_container button {
+      width: 100%;
+    }
   }
-}
->>>>>>> c3e7bc830f2d98080b0ab599b9527c40dbaa832e
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .html,input, #form_header_container,body,#button_container button ,#form_header,#form_content_inner_container,#button_container ,input,#content_container,#form_container {
+      width: 100%;
+    }
+  }
