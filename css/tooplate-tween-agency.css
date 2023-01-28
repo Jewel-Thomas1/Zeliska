@@ -337,8 +337,7 @@ button:focus:not(:focus-visible) {
   font-size: 40px;
   color: var(--white-color);
 }
-
-.navbar-expand-lg .navbar-nav .nav-link {
+ .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 25px;
   padding-left: 25px;
 }
@@ -347,7 +346,7 @@ button:focus:not(:focus-visible) {
   border-radius: 25px;
   border: 2px solid cyan;
   padding: 20px; 
-  width: 175px;
+  width: 175glsd=px;
   height: 60px;  
   color: var(--white-color);
   font-size: var(--menu-font-size);
