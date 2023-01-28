@@ -301,6 +301,13 @@ button:focus:not(:focus-visible) {
   border-color: transparent;
   border-bottom-color: var(--primary-color);
   color: var(--dark-color);
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
 }
 
 /*---------------------------------------
@@ -337,6 +344,11 @@ button:focus:not(:focus-visible) {
 }
 
 .navbar-nav .nav-link {
+  border-radius: 25px;
+  border: 2px solid cyan;
+  padding: 20px; 
+  width: 175px;
+  height: 60px;  
   color: var(--white-color);
   font-size: var(--menu-font-size);
   font-weight: var(--font-weight-normal);
