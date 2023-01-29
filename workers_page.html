@@ -6,9 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>ZELISKA</title>
 </head>
-<body><form id="gform" method="post" action="https://script.google.com/macros/s/AKfycbyG0Z8n-iSy_iEZIIVTFEmlhjEs-m6NEUMqTANFXa4LuG0HVAKiPjKGEU8Z4CDFQ1IS/exec">
+<body><form id="submit-form"  action="">
 
     <div class="background">
         <div class="container">
@@ -28,28 +29,28 @@
             <div class="screen-body">
               <div class="screen-body-item left">
                 <div class="app-title">
-                  <span>BE A PART OF</span>
-                  <span>ZELISKA</span>
+                  <span>BE A PART OF ZELISKA</span>
+                  <span></span>
                 </div>
                 <div class="app-contact">Enter Your details (Job,Place,Experience)</div>
               </div>
               <div class="screen-body-item">
                 <div class="app-form">
                   <div class="app-form-group">
-                    <input class="app-form-control" id="fname" placeholder="NAME"  >
+                    <input class="app-form-control" id="name" name="name" placeholder="NAME"  >
                   </div>
                   <div class="app-form-group">
-                    <input class="app-form-control" id="lname" placeholder="EMAIL">
+                    <input class="app-form-control" id="name" name="email" placeholder="EMAIL">
                   </div>
                   <div class="app-form-group">
-                    <input class="app-form-control" id="country" placeholder="CONTACT NUMBER">
+                    <input class="app-form-control" id="number" name="number" placeholder="CONTACT NUMBER">
                   </div>
                   <div class="app-form-group message">
-                    <input class="app-form-control" id="subject" placeholder="DETAILS">
+                    <input class="app-form-control" id="details" name="details" placeholder="DETAILS">
                   </div>
                   <div class="app-form-group buttons">
                     <button class="app-form-button" >CANCEL</button>
-                    <button class="app-form-button" type="submit" value="Submit">SEND</button>
+                    <button class="app-form-button" type="submit" id="submit" value="Submit">SEND</button>
                   </div>
                 </div>
               </div>
@@ -58,24 +59,25 @@
           
       </div>
 </form>
-<script>
-    $("#submit-form").submit((e)=>{
-        e.preventDefault()
-        $.ajax({
-            url:"",
-            data:$("#submit-form").serialize(),
-            method:"post",
-            success:function (response){
-                alert("Form submitted successfully")
-                window.location.reload()
-                //window.location.href="https://google.com"
-            },
-            error:function (err){
-                alert("Something Error")
 
-            }
-        })
-    })
+<script>
+  $("#submit-form").submit((e)=>{
+      e.preventDefault()
+      $.ajax({
+          url:"https://script.google.com/macros/s/AKfycbx7veYUoc38r9NQVU_WFrjG4_2UbvpSV7Q2GafQo84N6Y886l240BRmmqdB0Mf0b-rQRA/exec",
+          data:$("#submit-form").serialize(),
+          method:"post",
+          success:function (response){
+              alert("Your form has submitted successfully.We will add you to our sit as soon as")
+              window.location.reload()
+              //window.location.href="https://google.com"
+          },
+          error:function (err){
+              alert("Something Error")
+
+          }
+      })
+  })
 </script>
 </body>
 
