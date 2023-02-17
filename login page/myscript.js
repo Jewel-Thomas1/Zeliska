@@ -75,7 +75,6 @@ signinButton.addEventListener("click", (e) => {
       })
         .then(() => {
           // Data saved successfully!
-          //   alert("user telah sukses login");
           window.location.assign("options.html");
         })
         .catch((error) => {
